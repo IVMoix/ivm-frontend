@@ -9,7 +9,7 @@ import { Experiencia } from '../model/experiencia';
 })
 export class SExperienciaService {
    
-  URL = environment.URL + "experiencia/";
+  URL = environment.URL + "/experiencia/";
 
   constructor(private httpClient: HttpClient) { }
 

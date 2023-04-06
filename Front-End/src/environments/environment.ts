@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  URL: "https://backend-ivm.onrender.com/"
+  URL: "https://backendivm.onrender.com/"
   //URL: "http://localhost:8080"
 };
 

@@ -10,7 +10,6 @@ import { AboutComponent } from './components/about/about.component';
 import { ProyectComponent } from './components/proyect/proyect.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { APLogoComponent } from './components/header/ap-logo/ap-logo.component';
-import { SocialComponent } from './components/header/social/social.component';
 import { BannerComponent } from './components/header/banner/banner.component';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { HttpClient, HttpClientModule } from "@angular/common/http";
@@ -36,7 +35,6 @@ import { FormsModule } from '@angular/forms';
     ProyectComponent,
     FooterComponent,
     APLogoComponent,
-    SocialComponent,
     BannerComponent,
     HomeComponent,
     LoginComponent,

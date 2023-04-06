@@ -4,6 +4,7 @@
     align-items: center;
 }
 .redes{
+    border-right: 10%;
     margin-right: 0.5em;
 }
 #logoAP{

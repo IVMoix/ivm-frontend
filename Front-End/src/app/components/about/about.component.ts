@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { persona } from 'src/app/model/persona.model';
+import { TokenService } from 'src/app/service/token.service';
 import { PersonaService } from 'src/app/service/persona.service';
 
 @Component({
@@ -8,12 +9,25 @@ import { PersonaService } from 'src/app/service/persona.service';
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent implements OnInit {
-  persona: persona = new persona("","","");
+  persona: persona = new persona("", "", "", "");
+  isLogged = false;
 
-  constructor(public personaService: PersonaService) { }
+  constructor(public personaService: PersonaService, private tokenService: TokenService) { }
 
   ngOnInit(): void {
-    this.personaService.getPersona().subscribe(data => {this.persona = data})
+    this.cargarPersona(); // Agrega los paréntesis aquí para llamar al método
+    if (this.tokenService.getToken()) {
+      this.isLogged = true;
+    } else {
+      this.isLogged = false;
+    }
   }
+  
 
+  cargarPersona() {
+    this.personaService.detail(1).subscribe(data => {
+      this.persona = data;
+    });
+  }
+  
 }

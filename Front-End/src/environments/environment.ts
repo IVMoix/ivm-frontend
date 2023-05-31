@@ -3,9 +3,18 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
+  firebase: {
+    projectId: 'frontend-ivm',
+    appId: '1:925576698069:web:02d27fae03b263637b6a5c',
+    storageBucket: 'frontend-ivm.appspot.com',
+    locationId: 'southamerica-east1',
+    apiKey: 'AIzaSyCyXNgCvnBZ72bFkK4Wp9KNoZmy-ZbXCyc',
+    authDomain: 'frontend-ivm.firebaseapp.com',
+    messagingSenderId: '925576698069',
+  },
   production: false,
-  URL: "https://backendivm.onrender.com/"
-  //URL: "http://localhost:8080"
+  //URL: "https://backend-ivmoix.koyeb.app/"
+  URL: "http://localhost:8080/"
 };
 
 /*

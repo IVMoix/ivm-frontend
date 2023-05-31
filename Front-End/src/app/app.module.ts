@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -22,6 +23,10 @@ import { EditeducacionComponent } from './components/education/editeducacion/edi
 import { EditSkillComponent } from './components/hard-n-soft-skills/edit-skill/edit-skill.component';
 import { NewSkillComponent } from './components/hard-n-soft-skills/new-skill/new-skill.component'
 import { FormsModule } from '@angular/forms';
+import { EditAboutComponent } from './components/about/edit-about.component';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideStorage,getStorage } from '@angular/fire/storage';
 
 
 @NgModule({
@@ -44,13 +49,17 @@ import { FormsModule } from '@angular/forms';
     EditeducacionComponent,
     EditSkillComponent,
     NewSkillComponent,
+    EditAboutComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    CommonModule,
     NgCircleProgressModule.forRoot({}),
-    HttpClientModule
+    HttpClientModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideStorage(() => getStorage())
   ],
   providers: [],
   bootstrap: [AppComponent]

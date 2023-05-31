@@ -1,2 +1,3 @@
 # ivm-frontend
-Front-End portafolio proyecto, ARGENTINA PROGRAMA.
+
+El proyecto de "Argentina Programa" es un portafolio web que consta de varias secciones. Incluye un sistema de inicio de sesión, una sección "Acerca de mí" donde se detalla información personal, un componente de experiencia laboral que muestra el historial profesional, una sección de educación que destaca los logros académicos, un apartado de proyectos para exhibir trabajos realizados y una sección de habilidades duras y blandas representadas mediante círculos de porcentaje. Este portafolio está desarrollado en Angular y desplegado en Firebase, como parte de la iniciativa de promover la programación en Argentina.
